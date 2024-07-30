@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Without Download Option</title>
+    <title>Video Full Screen</title>
     <style>
-        .video-container {
-            position: relative;
+        body, html {
+            margin: 0;
+            padding: 0;
             width: 100%;
-            max-width: 600px;
-            margin: auto;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .video-container video {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
         .overlay {
             position: absolute;
@@ -38,10 +50,10 @@
 <body>
     <div class="video-container">
         <video autoplay muted loop>
-            <source src="https://file-examples.com/storage/fe3f15b9da66a36baa1b51a/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+            <source src="https://dnivara-1.github.io/Final-com.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="overlay">Video Playback</div>
+        <div class="overlay">Video</div>
     </div>
 </body>
 </html>
